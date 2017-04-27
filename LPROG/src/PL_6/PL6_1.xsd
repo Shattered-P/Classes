@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    
+<Turma Id="2DA">
+    <Professor Sigla="JSM">
+        <Nome>José Avelino da Silva Marinho</Nome>
+        <Email>jsm@isep.ipp.pt</Email>
+        <Gab>B307</Gab>
+    </Professor>
+    <Alunos>
+        <Aluno>
+            <Nome>João Pereira</Nome>
+            <Número>1151241</Número>
+        </Aluno>
+        <Aluno>
+            <Nome>xxx   xxxx</Nome>
+            <Número>12345679</Número>
+        </Aluno>
+        <Aluno>
+            <Nome>yyy   yyyy</Nome>
+            <Número>98765432</Número>
+        </Aluno>
+    </Alunos>
+    <Horário>
+        <Aula>
+            <Dia>18/04/2017</Dia>
+            <Hora>16.39</Hora>
+            <Sala>B309</Sala>
+        </Aula>
+    </Horário>
+</Turma> 
+
+</xs:schema>

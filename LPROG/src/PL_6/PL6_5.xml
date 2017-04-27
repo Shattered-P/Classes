@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sistema 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="PL6_5.xsd">
+    <computador descricao="Meu computador">
+        <componente id="R10D"/> <!--atributo id corresponde a código do componente -->
+        <componente id="RA01"/>
+        <componente id="RF0B"/>
+        <componente id="RAE1"/>
+    </computador>
+    <componentes>
+        <componente codigo ="RA01">
+            <item>Motherboard</item> <!-- Só são possíveis os valores: Motherboard,
+Video Card, Sound Card, Monitor, CPU, HDD, DVD -->
+            <modelo>P3B-F</modelo> <!-- máx 32 letras -->
+            <preco>100.00</preco> <!-- padrão monetário com dois dígitos após o
+ponto -->
+        </componente>
+        <componente codigo ="RAE1">
+            <item>Monitor</item>
+            <modelo>995E</modelo>
+            <preco>200.00</preco>
+        </componente>
+        <componente codigo ="RAF2">
+            <item>Monitor</item>
+            <modelo>L198H</modelo>
+            <preco>120.00</preco>
+        </componente>
+        <componente codigo ="R10D">
+            <item>Sound Card</item>
+            <modelo>Sound Blaster Live</modelo>
+            <preco>80.00</preco>
+        </componente>
+        <componente codigo ="RF0B">
+            <item>Video Card</item>
+            <modelo>All-in-Wonder Pro</modelo>
+            <preco>120.00</preco>
+        </componente>
+        <componente codigo ="RA02">
+            <item>Motherboard</item>
+            <modelo>A8G-2</modelo>
+            <preco>350.00</preco>
+        </componente>
+    </componentes>
+</sistema>
