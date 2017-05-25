@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<Livraria>
+    <Secção nome="Não Ficção">
+        <Livro Secção="Não Ficção">
+            <Título>Voices from Chernobyl</Título>
+            <SubTítulo>The Oral History of a Nuclear Disaster</SubTítulo>
+            <Autor>Svetlana Alexievich</Autor>
+            <Tradutor>Keith Gessen</Tradutor>
+            <TítuloOriginal>Чернобыльская молитва: Хроника будущего</TítuloOriginal>
+            <Sinopse>On April 26, 1986, the worst nuclear reactor accident in 
+                history occurred in Chernobyl and contaminated as much as three quarters of Europe. 
+                Voices from Chernobyl is the first book to present personal accounts of the tragedy. 
+                Journalist Svetlana Alexievich interviewed hundreds of people affected by the meltdown---
+                from innocent citizens to firefighters to those called in to clean up the disaster---
+                and their stories reveal the fear, anger, and uncertainty with which they still live. 
+                Composed of interviews in monologue form, Voices from Chernobyl is a crucially important work, 
+                unforgettable in its emotional power and honesty.</Sinopse>
+            <ISBN type="ISBN-10">0312425848</ISBN>
+            <Publisher>Picador</Publisher>
+            <ClassTema>História</ClassTema>
+            <Resumo>https://www.goodreads.com/author/show/7728207.Svetlana_Alexievich</Resumo>
+        </Livro>
+    </Secção>
+    <Secção name="Drama">
+        <Livro Secção="">
+            <Título>Imagine Wanting Only This</Título>
+            <SubTítulo>A gorgeous graphic memoir about loss, love, and confronting grief </SubTítulo>
+            <Autor>Kristen Radtke</Autor>
+            <Sinopse>When Kristen Radtke was in college, the sudden death of a 
+                beloved uncle and the sight of an abandoned mining town after his funeral 
+                marked the beginning moments of a lifelong fascination with ruins and with people 
+                and places left behind. Over time, this fascination deepened until it triggered a 
+                journey around the world in search of ruined places. Now, in this genre-smashing 
+                graphic memoir, she leads us through deserted cities in the American Midwest, 
+                an Icelandic town buried in volcanic ash, islands in the Philippines, 
+                New York City, and the delicate passageways of the human heart. 
+                Along the way, we learn about her family and a rare genetic heart disease 
+                that has been passed down through generations, and revisit tragic events in America's past.
+                A narrative that is at once narrative and factual, historical and personal, Radtke's stunning 
+                illustrations and piercing text never shy away from the big questions: Why are we here, 
+                and what will we leave behind? </Sinopse>
+            <ISBN type="ISBN-10">1101870834</ISBN>
+            <Publisher>Pantheon Books</Publisher>
+            <ClassTema>Arte</ClassTema>
+            <Resumo>https://www.goodreads.com/author/show/14531568.Kristen_Radtke</Resumo>
+        </Livro>
+        <Livro Secção="">
+            <Título>The Most Beautiful Woman in Florence</Título>
+            <SubTítulo>A Story of Botticelli</SubTítulo>
+            <Autor>Alyssa Palombo</Autor>
+            <Sinopse>A girl as beautiful as Simonetta Cattaneo never wants for marriage proposals in 15th Century Italy, but she jumps at the chance to marry Marco Vespucci. 
+                Marco is young, handsome and well-educated. Not to mention he is one of the powerful Medici family’s favored circle.
+                Even before her marriage with Marco is set, Simonetta is swept up into Lorenzo and Giuliano de’ Medici’s glittering circle of politicians, poets, artists, and philosophers. 
+                The men of Florence―most notably the rakish Giuliano de’ Medici―become enthralled with her beauty. That she is educated and an ardent reader of poetry makes her more desirable and fashionable still. 
+                But it is her acquaintance with a young painter, Sandro Botticelli, which strikes her heart most. Botticelli immediately invites Simonetta, 
+                newly proclaimed the most beautiful woman in Florence, to pose for him. As Simonetta learns to navigate her marriage, her place in Florentine society, and the politics of beauty and desire, 
+                she and Botticelli develop a passionate intimacy, one that leads to her immortalization in his masterpiece, The Birth of Venus.</Sinopse>
+            <ISBN>125007150X</ISBN>
+            <Publisher>St. Martin's Griffin</Publisher>
+            <ClassTema>Arte</ClassTema>
+            <Resumo>https://www.goodreads.com/author/show/10803986.Alyssa_Palombo</Resumo>
+        </Livro>
+    </Secção>
+    <Livro Secção="">
+        <Título>Salt, Fat, Acid, Heat</Título>
+        <SubTítulo>Mastering the Elements of Good Cooking</SubTítulo>
+        <Autor>Samin Nosrat</Autor>
+        <Sinopse>A visionary new master class in cooking that distills decades of professional 
+            experience into just four simple elements, from the woman declared “America’s next great cooking teacher” by Alice Waters.
+            In the tradition of The Joy of Cooking and How to Cook Everything comes Salt, Fat, Acid, Heat, an ambitious new approach to cooking 
+            by a major new culinary voice. Chef and writer Samin Nosrat has taught everyone from professional chefs to middle school kids 
+            to author Michael Pollan to cook using her revolutionary, yet simple, philosophy. Master the use of just four elements—Salt, 
+            which enhances flavor; Fat, which delivers flavor and generates texture; Acid, which balances flavor; and Heat, which ultimately 
+            determines the texture of food—and anything you cook will be delicious. By explaining the hows and whys of good cooking, Salt, Fat, Acid, 
+            Heat will teach and inspire a new generation of cooks how to confidently make better decisions in the kitchen and cook delicious meals with 
+            any ingredients, anywhere, at any time. Echoing Samin’s own journey from culinary novice to award-winning chef, Salt, Fat Acid, Heat immediately 
+            bridges the gap between home and professional kitchens. With charming narrative, illustrated walkthroughs, and a lighthearted approach to 
+            kitchen science, Samin demystifies the four elements of good cooking for everyone. Refer to the canon of 100 essential recipes—and dozens of 
+            variations—to put the lessons into practice and make bright, balanced vinaigrettes, perfectly caramelized roast vegetables, tender braised meats, 
+            and light, flaky pastry doughs. Featuring 150 illustrations and infographics that reveal an atlas to the world of flavor by renowned illustrator Wendy MacNaughton, Salt, Fat, 
+            Acid, Heat will be your compass in the kitchen. Destined to be a classic, it just might be the last cookbook you’ll ever need. </Sinopse>
+        <ISBN>1476753830</ISBN>
+        <Publisher>Simon Schuster</Publisher>
+        <ClassTema>Gastronomia</ClassTema>
+        <Resumo>https://www.goodreads.com/author/show/15401886.Samin_Nosrat</Resumo>
+    </Livro>
+    
+    <Livro Secção="">
+        <Título>The Icon Hunter</Título>
+        <SubTítulo>One Woman's Quest to Repatriate Her Stolen Cultural Heritage</SubTítulo>
+        <Autor>Tasoula Georgiou Hadjitofi</Autor>
+        <Sinopse>Tasoula Hadjitofi was only a child when her homeland, Cyprus, was invaded. As bombs fell and soldiers marched through the streets, her mother stood guard, 
+            reminding her children to not be afraid?not of the bombs or anything else that may follow. They would always have their family and their faith. Soon thereafter, 
+            Tasoula found herself homeless and nation-less. A refugee.
+            Decades later, she's a successful entrepreneur and the Honorary Consul of Cyprus in The Netherlands . But family and faith have remained her touchstones?and she's never 
+            lost her longing for "home" or for the gorgeous Cypriot churches and their icons.  One day, a dubious art dealer offers her a chance to buy stolen sacred artifacts looted 
+            from Cyprus during the war. Icons hold a special place in the hearts of Orthodox Christians. They are not just masterpieces?they are artistic manifestations of faith and a gateway to the divine.
+            Outraged, Tasoula sets out on a quest to repatriate these artifacts. An immensely legally challenging and expensive undertaking, as provenance of icons are and other holy 
+            artifacts are easily manipulated by corrupt dealers and greedy auction houses.  Taking on these "merchants of God" will test Tasoula's fortitude and threaten her safety, 
+            yet she feels this mission is her calling.  In this book, she reveals her perilous road to “The Munich Case”?the largest art trafficking sting in European history since WWII?
+            which is filled with mind games, subterfuge, global politics, and as shady figure named Van Rijn, whose motives are never entirely clear...  
+            By turns heart-pounding and inspiring, The Icon Hunter is a powerful and gripping story that will resonate long after the final page.</Sinopse>
+        <ISBN>1681773236</ISBN>
+        <Publisher>Pegasus Books</Publisher>
+        <ClassTema>Arte</ClassTema>
+        <Resumo>https://www.goodreads.com/author/show/15296658.Tasoula_Georgiou_Hadjitofi</Resumo>
+    </Livro>
+    <Secção name="Fantasia">
+        <Livro Secção="">
+            <Título>Henry and the Chalk Dragon</Título>
+            <Autor> Jennifer Trafton</Autor>
+            <Sinopse>In the town of Squashbuckle, just about anything can happen, and when Henry Penwhistle draws a mighty Chalk Dragon on his door, 
+                the dragon does what Henry least expects--it runs away. Now Henry's art is out in the world for everyone to see, and it's causing trouble 
+                for him and his schoolmates Oscar and Jade. If they don't stop it, the entire town could be doomed! To vanquish the threat of a rampaging Chalk Dragon, 
+                Sir Henry Penwhistle, Knight of La Muncha Elementary School, is going to have to do more than just catch his art--he's going to have to let his imagination run wild.
+                And THAT takes bravery.</Sinopse>
+            <ISBN>0986381888</ISBN>
+            <Publisher>Rabbit Room Press</Publisher>
+            <ClassTema>Arte</ClassTema>
+            <Resumo>https://www.goodreads.com/author/show/3413873.Jennifer_Trafton</Resumo>
+        </Livro>
+    </Secção>
+    <Livro Secção="">
+        <Título>The Icon Hunter</Título>
+        <Autor> Bianca Bosker</Autor>
+        <Sinopse>For readers of Anthony Bourdain, Susan Orlean, and Mary Roach, a surprising, entertaining and hilarious journey through the world of wine
+            Like many of us, tech reporter Bianca Bosker saw wine as a way to unwind at the end of a long day, or a nice thing to have with dinner and that was about it. 
+            Until she stumbled on an alternate universe where taste reigned supreme, a world in which people could, after a single sip of wine, identify the grape 
+            it was made from, in what year, and where it was produced down to the exact location, within acres. Where she tasted wine, these people detected not only 
+            complex flavor profiles, but entire histories and geographies. Astounded by theirfanatical dedicationand seemingly superhuman sensory powers, Bosker abandoned 
+            her screen-centric life and set out to discover what drove their obsession, and whether she, too, could become a cork dork. Thus begins a year and a half long 
+            adventure that takes the reader inside elite tasting groups, exclusive New York City restaurants, a California winery that manipulates the flavor of its bottles 
+            with ingredients like Mega Purple, and even a neuroscientist s fMRI machine as Bosker attempts to answer the most nagging question of all: what s the big deal about wine? 
+            Funny, counterintuitive, and compulsively readable, "Cork Dork "illuminates not only the complex web of wine production and consumption, but how tasting better can change 
+            our brains and help us live better.-- ReadingBianca Bosker islikesitting down witha brilliant, curious friend for an after-work drink, and suddenlyfindingit s midnight and 
+            the table is littered with empty bottles. Between her hilarious exploits and thoughtful meditations on wine and life, you ll wanttostay forjust one more. Lauren Collins, author of "When In French"" 
+            In this delightfully written and keenly observed book, Bianca Boskertakesreaderson a year-long rompthroughthe realm of wine lovers, experts, cultists, sommeliers, and poseurs.Along the way, she helps 
+            us becomeconnoisseursnot only of wine but also ofpeoplewhose passions would more aptly be described as obsessions. </Sinopse>
+        <ISBN>0698195906</ISBN>
+        <Publisher>Penguin Books</Publisher>
+        <ClassTema>Gastronomia</ClassTema>
+        <Resumo>https://www.goodreads.com/author/show/6507893.Bianca_Bosker</Resumo>
+    </Livro>
+    <Livro Secção="">
+        <Título>At Attention</Título>
+        <Autor>Annabeth Albert</Autor>
+        <Sinopse>Lieutenant Apollo Floros can ace tactical training missions, but being a single dad to his twin daughters is more than he can handle. He needs live-in help, 
+            and he's lucky a friend's younger brother needs a place to stay. He's surprised to see Dylan all grown up with a college degree…and a college athlete's body. 
+            Apollo's widowed heart may still be broken, but Dylan has his blood heating up. It's been eight years since the teenage Dylan followed Apollo around like a 
+            lovesick puppy, and it's time he showed Lieutenant Hard-to-Please that he's all man now—an adult who's fully capable of choosing responsibility over lust. 
+            He can handle Apollo's muscular sex appeal, but Apollo the caring father? Dylan can't afford to fall for that guy. He's determined to hold out for someone who's 
+            able to love him back, not someone who only sees him as a kid brother. Apollo is shocked by the intensity of his attraction to Dylan. Maybe some no-strings summer 
+            fun will bring this former SEAL back to life. But the combination of scorching desire and warm affection is more than he'd expected, and the emotion between them 
+            scares him senseless. No fling lasts forever, and Apollo will need to decide what's more important—his past or his future—if he wants to keep Dylan in his life. </Sinopse>
+        <ISBN>1-335-01344-X</ISBN>
+        <Publisher>Carina Press </Publisher>
+        <ClassTema>Erotismo</ClassTema>
+        <Resumo>https://www.goodreads.com/author/show/6477494.Annabeth_Albert</Resumo>
+    </Livro>
+    <Livro Secção="">
+        <Título>Every Body Yoga</Título>
+        <SubTítulo>Let Go of Fear. Get On the Mat. Love Your Body.</SubTítulo>
+        <Autor>Jessamyn Stanley</Autor>
+        <Sinopse>From the unforgettable teacher Jessamyn Stanley comes Every Body Yoga, a book that breaks all the stereotypes.
+            It’s a book of inspiration for beginners of all shapes and sizes: If Jessamyn could transcend these emotional and physical barriers, so can we.
+            It’s a book for readers already doing yoga, looking to refresh their practice or find new ways to stay motivated.
+            It’s a how-to book: Here are easy-to-follow directions to 50 basic yoga poses and 10 sequences to practice at home, all photographed in full color.
+            It’s a book that challenges the larger issues of body acceptance and the meaning of beauty.
+            Most of all, it’s a book that changes the paradigm, showing us that yoga isn’t about how one looks, but how one feels, with yoga sequences like 
+            “I Want to Energize My Spirit,” “I Need to Release Fear,” “I Want to Love Myself.”
+            Jessamyn Stanley, a yogi who breaks all the stereotypes, has built a life as an internationally recognized yoga teacher and award-winning Instagram 
+            star by combining a deep understanding for yoga with a willingness to share her personal struggles in a way that touches everyone who comes to know her. 
+            Now she brings her body-positive, emotionally uplifting approach to yoga in a book that will help every reader discover the power of yoga and how to weave  
+            it seamlessly into his or her life. </Sinopse>
+        <ISBN>0761193111</ISBN>
+        <Publisher>Workman Publishing Company</Publisher>
+        <ClassTema>Auto-Ajuda</ClassTema>
+        <Resumo>https://www.goodreads.com/author/show/15401949.Jessamyn_Stanley</Resumo>
+    </Livro>
+</Livraria>
