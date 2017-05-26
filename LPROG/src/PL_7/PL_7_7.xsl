@@ -25,7 +25,7 @@
                         <body>
                             <table border="1">
                                 <xsl:for-each select="Game">
-                                    <xsl:sort select="GameTitle"/>
+                                    <x  sl:sort select="GameTitle"/>
                                     <tr>
                                         <td>
                                             <xsl:value-of select="GameTitle"></xsl:value-of>

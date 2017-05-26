@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 
 
-<Livraria>
+<Livraria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="livro.xsd" xsi:schemaLocation="LivrariaScheme.xsd">
     <Secção nome="Não Ficção">
         <Livros>
             <Livro Secção="Não Ficção">
@@ -32,7 +32,7 @@ and open the template in the editor.
                 <CopiasVendidas>18</CopiasVendidas>
                 <Preço desconto="15">22€</Preço>
                 <Relacionados>
-                    <RISBN></RISBN>
+                    <RISBN>9780671728687</RISBN>
                 </Relacionados>
             </Livro>
         </Livros>
@@ -46,7 +46,7 @@ and open the template in the editor.
                 <Sinopse>Hitler boasted that The Third Reich would last a thousand years. It lasted only 12. But those 12 years contained some of the most catastrophic events Western civilization has ever known.
                     No other powerful empire ever bequeathed such mountains of evidence about its birth and destruction as the Third Reich. When the bitter war was over, and before the Nazis could destroy their files, the Allied demand for unconditional surrender produced an almost hour-by-hour record of the nightmare empire built by Adolph Hitler. This record included the testimony of Nazi leaders and of concentration camp inmates, the diaries of officials, transcripts of secret conferences, army orders, private letters—all the vast paperwork behind Hitler's drive to conquer the world.</Sinopse>
                 <ISBN type="ISBN-13">9780671728687</ISBN>
-                <Publisher>Simon & Schuster</Publisher>
+                <Publisher>SimonSchuster</Publisher>
                 <ClassTema>História</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/13360.William_L_Shirer</SobreAutor>
                 <CopiasVendidas>5</CopiasVendidas>
