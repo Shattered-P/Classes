@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="apresentar_por_autor.xsl" ?>
+<LojaOnline xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://lojaOnline.xsd" xsi:schemaLocation="lojaOnline.xsd">
+	<Livros>
+		<Livro>
+			<Titulo>Harry Potter and the Globet of Fire</Titulo>
+			<Autores>
+				<Autor nome="Will A. Rock">
+					<Info>
+						<Link>http://www.willyablack.com</Link>
+					</Info>
+				</Autor>
+				<Autor nome="J. K. Rowling">
+					<Info>
+						<Bio>J. K. Rowling is a bla bla bla</Bio>
+					</Info> 
+				</Autor>
+			</Autores>
+			<Sinopse>Harry Potter and the Goblet of Fire is the fourth novel in the Harry Potter series, written by British author J. K. Rowling. It follows Harry Potter, a wizard in his fourth year at Hogwarts School of Witchcraft and Wizardry and the mystery surrounding the entry of Harry's name into the Triwizard Tournament, in which he is forced to compete.</Sinopse>
+			<ISBN>1780747549718</ISBN>
+			<Edicao>4</Edicao>
+			<Editora>Areal</Editora>
+			<FormatoPublicacao> 
+				<Formato>ePUB</Formato>
+				<Formato>pdf</Formato>
+				<Formato>eBook</Formato>
+			</FormatoPublicacao>
+			<ClassificacaoTematica classificacaoTematica="Infantojuvenil">
+				<SubClassificacao>Plano Nacional de Leitura</SubClassificacao>
+				<SubClassificacao>Literatura</SubClassificacao>
+			</ClassificacaoTematica>
+			<ClassificacaoLeitores>8</ClassificacaoLeitores>
+			<LivrosRelacionados>  
+				<Autor nome="J. K. Rowling">
+					<LivroISBN>2780747549710</LivroISBN>
+					<LivroISBN>3780746529710</LivroISBN>
+				</Autor>
+			</LivrosRelacionados>
+			<Preco>39.90</Preco>
+			<Capa>https://www.teachervision.com/sites/default/files/fe_slideshow/2007_07/HPusa4_TV.jpg</Capa>
+		</Livro>
+		<Livro>
+			<Titulo>Harry Potter and the Order of the Phoenix</Titulo>
+			<Autores>
+				<Autor nome="J. K. Rowling">
+					<Info>
+						<Link>https://www.jkrowling.com/</Link>
+					</Info> 
+				</Autor>
+			</Autores>
+			<Sinopse>Harry Potter and the Order of the Phoenix is the fifth novel in the Harry Potter series, written by British author J. K. Rowling. It follows Harry Potter, a wizard in his fourth year at Hogwarts School of Witchcraft and Wizardry and the mystery surrounding the entry of Harry's name into the Triwizard Tournament, in which he is forced to compete.</Sinopse>
+			<ISBN>2780747549710</ISBN>
+			<Edicao>7</Edicao>
+			<Editora>Areal</Editora>
+			<FormatoPublicacao> 
+				<Formato>ePUB</Formato>
+				<Formato>pdf</Formato>
+			</FormatoPublicacao>
+			<ClassificacaoTematica classificacaoTematica="Infantojuvenil">
+				<SubClassificacao>Plano Nacional de Leitura</SubClassificacao>
+			</ClassificacaoTematica>
+			<ClassificacaoLeitores>6</ClassificacaoLeitores>
+			<Preco>35.90</Preco>
+			<Capa>http://www.pearltrees.com/s/pic/or/harry-potter-order-phoenix-80978554</Capa>
+		</Livro>
+		<Livro>
+			<Titulo>Harry Potter and the Prisoner of Azkaban</Titulo>
+			<Autores>
+				<Autor nome="J. K. Rowling">
+					<Info>
+						<Bio>J. K. Rowling is a bla bla bla</Bio>
+					</Info> 
+				</Autor>
+			</Autores>
+			<Sinopse>Harry Potter and the Prisoner of Azkaba is the third novel in the Harry Potter series, written by British author J. K. Rowling. It follows Harry Potter, a wizard in his fourth year at Hogwarts School of Witchcraft and Wizardry and the mystery surrounding the entry of Harry's name into the Triwizard Tournament, in which he is forced to compete.</Sinopse>
+			<ISBN>3780746529710</ISBN>
+			<Edicao>2</Edicao>
+			<Editora>Areal</Editora>
+			<FormatoPublicacao> 
+				<Formato>ePUB</Formato>
+			</FormatoPublicacao>
+			<ClassificacaoTematica classificacaoTematica="Infantojuvenil">
+				<SubClassificacao>Plano Nacional de Leitura</SubClassificacao>
+			</ClassificacaoTematica>
+			<ClassificacaoLeitores>10</ClassificacaoLeitores>
+			<LivrosRelacionados>  
+				<Autor nome="J. K. Rowling">
+					<LivroISBN>2780747549710</LivroISBN>
+					<LivroISBN>1780747549718</LivroISBN>
+				</Autor>
+			</LivrosRelacionados>
+			<Preco>59.90</Preco>
+		</Livro>
+		<Livro>
+			<Titulo>Os 3 porquinhos</Titulo>
+			<Autores>
+				<Autor nome="Telma Silveira">
+					<Info>
+						<Link>http:/www.telmasilveira.com</Link>
+					</Info> 
+				</Autor>
+			</Autores>
+			<Sinopse>Conta a historia de 3 porquinhos irmão etc etc</Sinopse>
+			<ISBN>1234567891234</ISBN>
+			<Edicao>1</Edicao>
+			<Editora>Amadora</Editora>
+			<FormatoPublicacao> 
+				<Formato>ePUB</Formato>
+				<Formato>pdf</Formato>
+			</FormatoPublicacao>
+			<ClassificacaoTematica classificacaoTematica="Infantojuvenil"/>
+			<ClassificacaoLeitores>7</ClassificacaoLeitores>
+			<Preco>9.90</Preco>
+		</Livro>
+	</Livros>
+	<MaisVendidos>
+		<LivroISBN>1780747549718</LivroISBN>
+		<LivroISBN>2780747549710</LivroISBN>
+	</MaisVendidos>
+	<Novidades>
+		<LivroISBN>2780747549710</LivroISBN>
+		<LivroISBN>1234567891234</LivroISBN>
+	</Novidades>
+	<Promocoes>
+		<LivroISBN desconto="50">3780746529710</LivroISBN>
+		<LivroISBN desconto="30">1780747549718</LivroISBN>
+	</Promocoes>
+</LojaOnline>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:c="http://lojaOnline.xsd" targetNamespace="http://lojaOnline.xsd" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+		<xs:element name="LojaOnline" type="c:TlojaOnline">
+			<xs:key name="ISBN_key"> 
+				<xs:selector xpath="./c:Livros/c:Livro"/> 
+				<xs:field xpath="c:ISBN"/> 
+			</xs:key>
+			<xs:keyref name="keyref_ISBN_MV" refer="c:ISBN_key"> 
+				<xs:selector xpath="c:MaisVendidos/c:LivroISBN"/> 
+				<xs:field xpath="."/> 
+			</xs:keyref>
+			<xs:keyref name="keyref_ISBN_NV" refer="c:ISBN_key"> 
+				<xs:selector xpath="c:Novidades/c:LivroISBN"/> 
+				<xs:field xpath="."/> 
+			</xs:keyref>
+			<xs:keyref name="keyref_ISBN_PRO" refer="c:ISBN_key"> 
+				<xs:selector xpath="c:Promocoes/c:LivroISBN"/> 
+				<xs:field xpath="."/> 
+			</xs:keyref>
+			<xs:keyref name="keyref_ISBN_RELATED" refer="c:ISBN_key"> 
+				<xs:selector xpath="c:Livros/c:Livro/c:LivrosRelacionados/c:Autor/c:LivroISBN"/> 
+				<xs:field xpath="."/> 
+			</xs:keyref>
+		</xs:element>
+		
+		<xs:complexType name="TlojaOnline">
+			<xs:sequence>
+				<xs:element name="Livros" type="c:Tlivros"/>
+				<xs:element name="MaisVendidos" type="c:TmaisVendidos"/>
+				<xs:element name="Novidades" type="c:Tnovidades"/>
+				<xs:element name="Promocoes" type="c:Tpromocoes"/>
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:complexType name="Tlivros">
+			<xs:sequence>
+				<xs:element name="Livro" type="c:Tlivro" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:complexType name="Tlivro">
+			<xs:sequence>
+				<xs:element name="Titulo" type="c:TlivroTitulo"/>
+				<xs:element name="Autores" type="c:Tautores"/>
+				<xs:element name="Sinopse" type="xs:string"/>
+				<xs:element name="ISBN" type="c:Tisbn"/>
+				<xs:element name="Edicao" type="c:Tedicao"/>
+				<xs:element name="Editora" type="xs:string"/>
+				<xs:element name="FormatoPublicacao" type="c:TformatoPub"/>
+				<xs:element name="ClassificacaoTematica" type="c:TclassTema"/>
+				<xs:element name="ClassificacaoLeitores" type="c:TclassLeitor"/>
+				<xs:element name="LivrosRelacionados" type="c:TlivrosRela" minOccurs="0"/>
+				<xs:element name="Preco" type="c:Tpreco"/>
+				<xs:element name="Capa" type="xs:anyURI" minOccurs='0'/>
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:simpleType name="TlivroTitulo">
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[0-9A-Z ][a-zA-Z0-9 ]*"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:complexType name="Tautores">
+			<xs:sequence>
+				<xs:element name="Autor" type="c:Tautor" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:complexType name="Tautor">
+			<xs:sequence>
+				<xs:element name="Info" type="c:Tinfo"/>
+			</xs:sequence>
+			<xs:attribute name="nome" type="xs:string" use="required" />
+		</xs:complexType>
+		
+		<xs:complexType name="Tinfo">
+			<xs:choice>
+				<xs:element name="Link" type="xs:anyURI"/>
+				<xs:element name="Bio" type="xs:string"/>
+			</xs:choice>
+		</xs:complexType>
+		
+		<xs:simpleType name="Tisbn">
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[0-9]{13}"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:simpleType name="Tedicao">
+			<xs:restriction base="xs:int">
+				<xs:minInclusive value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:complexType name="TformatoPub">
+			<xs:sequence>
+				<xs:element name="Formato" type="c:Tformato" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:simpleType name="Tformato">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="ePUB"/>
+				<xs:enumeration value="pdf"/>
+				<xs:enumeration value="eBook"/>
+				<xs:enumeration value="doc"/>
+				<xs:enumeration value="docx"/>
+				<xs:enumeration value="pdb"/>
+				<xs:enumeration value="htm"/>
+				<xs:enumeration value="ibook"/>
+				<xs:enumeration value="kf8"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:complexType name="TclassTema">
+			<xs:sequence>
+				<xs:element name="SubClassificacao" type="c:TclassTematica" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="classificacaoTematica" type="c:TclassTematica" use="required"/>
+		</xs:complexType>
+		
+		<xs:simpleType name="TclassTematica">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Arte"/>
+				<xs:enumeration value="Autoajuda"/>
+				<xs:enumeration value="Banda Desenhada"/>
+				<xs:enumeration value="Ciências Exatas e Naturais"/>
+				<xs:enumeration value="Ciências Sociais e Humanas"/>
+				<xs:enumeration value="Desporto e Lazer"/>
+				<xs:enumeration value="Dicionários e Enciclopédias"/>
+				<xs:enumeration value="Direito"/>
+				<xs:enumeration value="Economia"/>
+				<xs:enumeration value="Finanças e Contabilidade"/>
+				<xs:enumeration value="Engenharia"/>
+				<xs:enumeration value="Ensino e Educação"/>
+				<xs:enumeration value="Erotismo e Sexualidade"/>
+				<xs:enumeration value="Gastronomia e Vinhos"/>
+				<xs:enumeration value="Gestão"/>
+				<xs:enumeration value="Guias e Roteiros"/>
+				<xs:enumeration value="História"/>
+				<xs:enumeration value="Infantojuvenil"/>
+				<xs:enumeration value="Informática"/>
+				<xs:enumeration value="Literatura"/>
+				<xs:enumeration value="Medicina e Saúde"/>
+				<xs:enumeration value="Plano Nacional de Leitura"/>
+				<xs:enumeration value="Politíca"/>
+				<xs:enumeration value="Religião e Moral"/>
+				<xs:enumeration value="Vida Prática"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:simpleType name="TclassLeitor">
+			<xs:restriction base="xs:int">
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:complexType name="TlivrosRela">
+			<xs:sequence>
+				<xs:element name="Autor" type="c:Tautor2" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:complexType name="Tautor2">
+			<xs:sequence>
+				<xs:element name="LivroISBN" type="c:Tisbn" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="nome" type="xs:string" use="required"/>
+		</xs:complexType>
+		
+		<xs:simpleType name="Tpreco">
+			<xs:restriction base="xs:float">
+				<xs:minInclusive value="0"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:complexType name="TmaisVendidos">
+			<xs:sequence>
+				<xs:element name="LivroISBN" type="c:Tisbn" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:complexType name="Tnovidades">
+			<xs:sequence>
+				<xs:element name="LivroISBN" type="c:Tisbn" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:complexType name="Tpromocoes">
+			<xs:sequence>
+				<xs:element name="LivroISBN" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="c:Tisbn">
+								<xs:attribute name="desconto" type="c:Tdesconto" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:simpleType name="Tdesconto">
+			<xs:restriction base="xs:int">
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="100"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+</xs:schema>
