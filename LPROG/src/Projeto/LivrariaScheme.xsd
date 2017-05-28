@@ -6,54 +6,55 @@ and open the template in the editor.
 -->
 
 <xs:schema version="1.0"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="livro.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:x="livro.xsd"
+           targetNamespace="livro.xsd"
            elementFormDefault="qualified">
     
-    <xs:element name="Livraria" type="c:TLivraria">
+    <xs:element name="Livraria" type="x:TLivraria">
         <xs:key name="Code_ISBN">
-            <xs:selector xpath="./c:Secç
-ao/c:Livros/c:Livro"/>
-            <xs:field xpath="c:ISBN"/>
+            <xs:selector xpath="./x:Secçao/x:Livros/x:Livro"/>
+            <xs:field xpath="x:ISBN"/>
         </xs:key>
-        <xs:keyref name="Related_ISBN" refer="c:Code_ISBN">
-            <xs:selector xpath="c:Secção/c:Livros/c:Livro/c:Relacionados/c:RISBN"/>
+        
+        <xs:keyref name="Related_ISBN" refer="x:Code_ISBN">
+            <xs:selector xpath="x:Secção/x:Livros/x:Livro/x:Relacionados/x:RISBN"/>
             <xs:field xpath="."/>
         </xs:keyref>
     </xs:element>
     
     <xs:complexType name="TLivraria">
         <xs:sequence>
-            <xs:element name="Secção" type="c:Secção"/>
+            <xs:element name="Secção" type="x:Secção"/>
         </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="TSecção">
         <xs:sequence>
-            <xs:element name="Livros" type="c:TLivros"/>
+            <xs:element name="Livros" type="x:TLivros"/>
         </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="TLivros">
         <xs:sequence>
-            <xs:element name="Livro" type="c:TLivro" maxOccurs="unbounded"/>
+            <xs:element name="Livro" type="x:TLivro" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="TLivro">
         <xs:sequence>
-            <xs:element name="Título" type="c:TTituloLivro"></xs:element>
-            <xs:element name="Autores" type="c:TAutores"/>
-            <xs:element name="Tradutor" type="c:TTradutor" minOccurs="0"/>
-            <xs:element name="TituloOriginal" type="c:TTituloOriginal"minOccurs="0"/>
-            <xs:element name="Sinopse" type="c:TSinopse" minOccurs="1"/>
-            <xs:element name="ISBN" type="c:TISBN" minOccurs="1"/>
-            <xs:element name="Publisher" type="c:TPublisher"/>
-            <xs:element name="ClassTema" type="c:TClassTema"/>
-            <xs:element name="SobreAutor" type="c:TSobreAutor" />
-            <xs:element name="CopiasVendidas" type="c:TCopiasVendidas"/>
-            <xs:element name="Preço" type="c:TPreço"/>
-            <xs:element name="Relacionados" type="c:TRelacionados"/>
+            <xs:element name="Título" type="x:TTituloLivro"></xs:element>
+            <xs:element name="Autores" type="x:TAutores"/>
+            <xs:element name="Tradutor" type="x:TAutor" minOccurs="0"/>
+            <xs:element name="TituloOriginal" type="x:TTituloOriginal" minOccurs="0"/>
+            <xs:element name="Sinopse" type="x:TSinopse" minOccurs="1"/>
+            <xs:element name="ISBN" type="x:TISBN" minOccurs="1"/>
+            <xs:element name="Publisher" type="x:TPublisher"/>
+            <xs:element name="ClassTema" type="x:TClassTema"/>
+            <xs:element name="SobreAutor" type="x:TSobreAutor" />
+            <xs:element name="CopiasVendidas" type="x:TCopiasVendidas"/>
+            <xs:element name="Preço" type="x:TPreço"/>
+            <xs:element name="Relacionados" type="x:TRelacionados" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
     
@@ -63,6 +64,25 @@ ao/c:Livros/c:Livro"/>
         </xs:restriction>
     </xs:simpleType>
     
+    <xs:simpleType name="TAutor">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9A-Z ][a-zA-Z0-9 ]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="TAutores">
+        <xs:sequence>
+            <xs:element name="Autor" type="x:TAutor" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    
+    <xs:simpleType name="TTituloOriginal">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9A-Z ][a-zA-Z0-9 ]*"/>
+        </xs:restriction>
+    </xs:simpleType>
     
 
 </xs:schema>
