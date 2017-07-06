@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<relatório id="k1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="Relatorio.xsd">
+    <páginaRosto>
+        <tema>XML</tema>
+        <disciplina id="LPROG">
+            <designação>Linguagens e Programação</designação>
+            <anoCurricular>02</anoCurricular>
+            <sigla>LPROG</sigla>
+        </disciplina>
+        <autor id="n1130720">
+            <nome>José Miguel Batista de Lemos</nome>
+            <número>1130720</número>
+            <mail>1130720@isep.ipp.pt</mail>
+        </autor>
+        <autor id="n1131130">
+            <nome>Rachine Francisco Semedo Gomes Ribeiro</nome>
+            <número>1131130</número>
+            <mail>1131130@isep.ipp.pt</mail>
+        </autor>
+        <autor id="n1151241">
+            <nome>João Pedro Fernandes Pereira</nome>
+            <número>1151241</número>
+            <mail>1151241@isep.ipp.pt</mail>
+        </autor>
+        <data>2017-05-28</data>
+        <turmaPL>2DH</turmaPL>
+        <profPL>JRT</profPL>
+        <logotipoDEI>http://www.dei.isep.ipp.pt/images/topo_index.png</logotipoDEI>
+    </páginaRosto>
+    
+    <corpo id="Trabalho Prático de LPROG">
+        <introdução tituloSecção="Introdução" id="SEC001">
+            <bloco>
+                <parágrafo>
+                    <bold>
+                        Este relatório explicativo do trabalho sobre tecnologias XML foi desenvolvido no âmbito da unidade curricular de Linguagens 
+                        de Programação(LPROG), lecionada no segundo semestre do segundo ano da Licenciatura 
+                        em Engenharia Informática no Instituto Superior de Engenharia do Porto, no ano letivo de
+                        2016/2017.
+                    </bold>
+                </parágrafo>
+                <parágrafo>
+                    <bold>
+                        Dentro da temática referida a cima será necessário cumprir um conjunto de objetivos concretos,
+                        nomeadamente a definição de uma representação XML para um domínio específico e de uma sintaxe dessa 
+                        linguagem através do respectivo XML Schema (XSD), criar  instâncias (documentos XML) e validá-las de acordo com o XSD 
+                        e realizar transformações ao documento XML (para XML e HTML) usando XSLT e XPath.
+                    </bold>
+                </parágrafo>
+            </bloco>
+        </introdução>
+        <secções>
+            <análise tituloSecção="Análise" id="SEC002">
+                <bloco>
+                    <parágrafo>
+                        <citação>RefW_003</citação>
+                        <bold>
+                            Será portanto necessária uma aplicação para manter o registo do catálogo de
+                            livros em formato eletrónico comercializados por uma loja online.
+                        </bold>                      
+                        <bold>
+                            Para isso, o documento XML que nos serviu como base do projeto, 
+                            decidimos dividir a sua estrutura em duas partes: RegistoIndividuos e ListaRelacoes. 
+                            A primeira será uma Base de Dados onde se encontraráa informação relativa aos individuos que constituirão a árvore geneológica; 
+                            a segunda representará a listagem de relações familiares entre os intervenientes. Ambas as metades do documento estarão relacionadas através de um sistema de ID.                              
+                        </bold>
+                    </parágrafo>
+                </bloco>
+            </análise>
+            <linguagem tituloSecção="A Linguagem" id="SEC003">
+                <bloco>
+                    <parágrafo>
+                        <bold>
+                            O XMLSchema que modelará o documento XML 
+                            estará explicito num ficheiro XSD. 
+                            A sua estrutura englobará o tipo EstudoGeneológico
+                            (root), assim como os seus subtipos Lista de Relações e
+                            Registo de Individuos. Tanto os individuos como as 
+                            relações entre eles serão também definidos, tendo o primeiro
+                            informação relativa ao seu ID, nome, data de nascimento
+                            e falecimento (esta última opcional); enquanto que a 
+                            relação (unidirecional)     englobará o id coindivíduo que visa, 
+                            assim como o do individuo ao qual está relacionado e um subtipo
+                            relação, no qual foi delimitado os tipos de relação que 
+                            o ficheiro XML admite.
+                            Em termos de limitações por este último subtipo imposto,
+                            serão válidas relações de paternidade como pai-filho ou avô-neto, 
+                            relações que provêm de situações entre irmãos exemplificado pelo
+                            caso entre tio-sobrinho e cunhados, assim como as relações
+                            entre indivíduos no mesmo nivel da árvore geneológica como irmandade,
+                            casamento (cônjugue) ou posterior divórcio. 
+                        </bold>
+                    </parágrafo>
+                </bloco>
+                <bloco>
+                    <parágrafo>
+                        <itálico>Exemplo de Indivíduo</itálico>
+                    </parágrafo>
+                    <codigo>
+                        <linha>&lt;individuo id="k06"&gt;</linha>
+                        <linha>&lt;nome&gt;Eddard&lt;/nome&gt;</linha>
+                        <linha>&lt;sexo&gt;Masculino&lt;/sexo&gt;</linha>
+                        <linha>&lt;fotografia&gt;http://vignette2.wikia.nocookie.net/gameofthrones/images/9/9c/EddardStark.jpg/revision/latest?cb=20110626030942&lt;/fotografia&gt;</linha>
+                        <linha>&lt;dataNascimento&gt;1967-09-06&lt;/dataNascimento&gt;</linha>
+                        <linha>&lt;dataFalecimento&gt;2015-05-06&lt;/dataFalecimento&gt;</linha>
+                    </codigo>
+                    <figura src=".\imagens\test.png" descrição="Indivíduo"></figura>
+                    <figura src=".\imagens\xsdInd.png" descrição="xsd:Individuo"></figura>
+                </bloco>
+                <bloco>
+                    <parágrafo>
+                        <itálico>Exemplo de Relação</itálico>
+                    </parágrafo>
+                    <codigo>
+                        <linha>&lt;IndividuoRelacao&gt;</linha>
+                        <linha>&lt;id&gt;k11&lt;/id&gt;</linha>
+                        <linha>&lt;idOther&gt;k09&lt;/idOther&gt;</linha>
+                        <linha>&lt;Relacao&gt;filho&lt;/Relacao&gt;</linha>
+                        <linha>&lt;IndividuoRelacao&gt;</linha>
+                    </codigo>
+                    <figura src=".\imagens\rel.png" descrição="Relação"></figura>
+                    <figura src=".\imagens\lim.png" descrição="Limitações Relação"></figura>
+                </bloco>
+            </linguagem>
+            <transformações tituloSecção="Transformações" id="SEC004">
+                <bloco>
+                    <listaItems>
+                        <item>XML</item>
+                        <item>HTML</item>
+                        <item>TXT</item> 
+                    </listaItems>
+                    <parágrafo>
+                        <bold>
+                            É providenciado, de acordo com a divisão do XML 
+                            principal em Registo de Individuos e Lista de Relações,
+                            2 ficheiros XLS para o transformar em TXT, um para cada
+                            uma das partes fulcrais, sendo a sua informação apresentada
+                            individualmente no ficheiro final. O mesmo ocorre com as 
+                            transformações para o formato HTML. Na transformação para
+                            um XML alternativo, agrupamos cada um dos individuos presentes
+                            na árvore com as suas relações com os demais. 
+                        </bold>
+                    </parágrafo>
+                </bloco>
+                <bloco>
+                    <parágrafo> 
+                        <itálico>Exemplo de Transformação XML - XML:</itálico>
+                    </parágrafo>
+                    <figura src=".\imagens\xml.png" descrição="XML-XML"></figura>
+                </bloco>
+                <bloco>
+                    <parágrafo>
+                        <itálico>Exemplo de Transformação XML - HTML:</itálico>
+                    </parágrafo>
+                    <figura src=".\imagens\html.png" descrição="XML-HTML"></figura>
+                </bloco>
+                <bloco>
+                    <parágrafo> 
+                        <itálico>Exemplo de Transformação XML - TXT:</itálico>
+                    </parágrafo>
+                    <figura src=".\imagens\txt.png" descrição="XML-TXT"></figura>
+                </bloco>
+            </transformações>
+        </secções>
+        <conclusão tituloSecção="Conclusão" id="SEC005">
+            <bloco>
+                <parágrafo>
+                    <bold>
+                        Após a verificação dos documentos gerados pelas
+                        transformações do XML original, verificámos que este processo
+                        foi corretamente implementado para todos os formatos pedidos.
+                        Todos os documentos que foram gerados pelos ficheiros XLS 
+                        enumerados na secção de "Transformações" encontram-se com as 
+                        especificações e informação pretendidas. 
+                        Podemos portanto concluir que o trabalho correu relativamente bem graças a uma boa coordenação em grupo, onde o diálogo e a troca de opiniões foram importantíssimas para
+                        a superação dos problemas que foram surgindo. É necessário também realçar a importância das aulas, pois foram decisivas para conseguirmos desenvolver
+                        corretamente o trabalho, bem como todos os documentos de apoio disponibilizados no moodle e a constante pesquisa efectuada ao longo do processo de desenvolviemento.                    
+                        Face a tudo isto, é unânime no grupo que este projeto teve um papel fundamental para um maior conhecimento e compreensão de XML e suas tecnologias, e nos encontramos 
+                        melhor preparados agora para a realização do exame final da cadeira.
+                    </bold>
+                </parágrafo>
+            </bloco>
+        </conclusão>
+        <referências> 
+            <refWeb idRef="RefW_001"> <!--Usar para paginas da web-->
+                <URL>https://www.w3schools.com/xml/ref_xsl_el_key.asp</URL>
+                <descrição>XSLT key() Function</descrição>
+                <consultadoEm>2016-05-16</consultadoEm>
+            </refWeb>
+            <refWeb idRef="RefW_002"> <!--Usar para paginas da web-->
+                <URL>https://www.w3schools.com/xml/xml_xslt.asp</URL>
+                <descrição>XML and XSLT</descrição>
+                <consultadoEm>2016-05-14</consultadoEm>
+            </refWeb>
+            <refWeb idRef="RefW_003">
+                <URL>https://www.w3schools.com/xml/xsl_intro.asp</URL>
+                <descrição>XSLT Introduction</descrição>
+                <consultadoEm>2016-05-09</consultadoEm>
+            </refWeb>
+            <refWeb idRef="RefW_004"> <!--Usar para paginas da web-->
+                <URL>https://moodle.isep.ipp.pt/pluginfile.php/148179/mod_resource/content/8/TP201617.pdf</URL>
+                <descrição>Enunciado</descrição>
+                <consultadoEm>2016-05-04</consultadoEm>
+            </refWeb>
+        </referências>
+    </corpo>
+    <anexos tituloSecção="Anexos" id="ANX001">
+        <bloco>
+            <codigo id="k05">
+                <linha>code</linha>
+                <linha>codes</linha>
+            </codigo>
+        </bloco>
+    </anexos>
+</relatório>

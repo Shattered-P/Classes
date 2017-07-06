@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 
-<Livraria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:x="livro.xsd" xsi:schemaLocation="LivrariaScheme.xsd">
-    <Secção nome="Não Ficção">
+
+<Livraria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xmlns="bookstore" 
+          xsi:schemaLocation="bookstore LivrariaScheme.xsd">
+    <Secção>
         <Livros>
             <Livro Secção="Não Ficção">
-                <Título xml:lang="en">Voices from Chernobyl</Título>
+                <Título lang="en">Voices from Chernobyl</Título>
                 <SubTítulo>The Oral History of a Nuclear Disaster</SubTítulo>
                 <Autores>
                     <Autor>Svetlana Alexievich</Autor>
                 </Autores>
                 <Tradutor>Keith Gessen</Tradutor>
-                <TítuloOriginal xml:lang="ru">Чернобыльская молитва: Хроника будущего</TítuloOriginal>
                 <Sinopse>On April 26, 1986, the worst nuclear reactor accident in 
                     history occurred in Chernobyl and contaminated as much as three quarters of Europe. 
                     Voices from Chernobyl is the first book to present personal accounts of the tragedy. 
@@ -29,15 +26,13 @@ and open the template in the editor.
                 <ClassTema>História</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/7728207.Svetlana_Alexievich</SobreAutor>
                 <CopiasVendidas>18</CopiasVendidas>
-                <Preço desconto="15">22€</Preço>
+                <Preço desconto="15">22</Preço>
                 <Relacionados>
                     <RISBN>9780671728687</RISBN>
                 </Relacionados>
             </Livro>
-        </Livros>
-        <Livros>
             <Livro Secção="Não Ficção">
-                <Título xml:lang="en">The Rise and Fall of the Third Reich</Título>
+                <Título lang="en">The Rise and Fall of the Third Reich</Título>
                 <SubTítulo>A History of Nazi Germany</SubTítulo>
                 <Autores>
                     <Autor>William L. Shirer</Autor>
@@ -49,18 +44,18 @@ and open the template in the editor.
                 <ClassTema>História</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/13360.William_L_Shirer</SobreAutor>
                 <CopiasVendidas>5</CopiasVendidas>
-                <Preço desconto="10">24€</Preço>
+                <Preço desconto="10">24</Preço>
                 <Relacionados>
                     <RISBN>0312425848</RISBN>
                 </Relacionados>
             </Livro>
         </Livros>
     </Secção>
-    <Secção name="Arte">
+    <Secção>
         <Livros>
             <Livro Secção="Arte">
-                <Título>Imagine Wanting Only This</Título>
-                <SubTítulo>A gorgeous graphic memoir about loss, love, and confronting grief </SubTítulo>
+                <Título lang="en">Imagine Wanting Only This</Título>
+                <SubTítulo>A gorgeous graphic memoir about loss, love, and confronting grief</SubTítulo>
                 <Autores>
                     <Autor>Kristen Radtke</Autor>
                 </Autores>
@@ -81,7 +76,8 @@ and open the template in the editor.
                 <Publisher>Pantheon Books</Publisher>
                 <ClassTema>Arte</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/14531568.Kristen_Radtke</SobreAutor>
-                <Preço desconto="50">16€</Preço>
+                <CopiasVendidas>12</CopiasVendidas>
+                <Preço desconto="50">16</Preço>
                 <Relacionados>
                     <RISBN>125007150X</RISBN>
                     <RISBN>1681773236</RISBN>
@@ -89,7 +85,7 @@ and open the template in the editor.
                 </Relacionados>
             </Livro>
             <Livro Secção="Arte">
-                <Título>The Most Beautiful Woman in Florence</Título>
+                <Título lang="en">The Most Beautiful Woman in Florence</Título>
                 <SubTítulo>A Story of Botticelli</SubTítulo>
                 <Autores>
                     <Autor>Alyssa Palombo</Autor>
@@ -105,7 +101,8 @@ and open the template in the editor.
                 <Publisher>St. Martin's Griffin</Publisher>
                 <ClassTema>Arte</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/10803986.Alyssa_Palombo</SobreAutor>
-                <Preço desconto="30">10€</Preço>
+                <CopiasVendidas>12</CopiasVendidas>
+                <Preço desconto="30">10</Preço>
                 <Relacionados>
                     <RISBN>0312425848</RISBN>
                     <RISBN>1681773236</RISBN>
@@ -113,7 +110,7 @@ and open the template in the editor.
                 </Relacionados>
             </Livro>
             <Livro Secção="Arte">
-                <Título>The Icon Hunter</Título>
+                <Título lang="en">The Icon Hunter</Título>
                 <SubTítulo>One Woman's Quest to Repatriate Her Stolen Cultural Heritage</SubTítulo>
                 <Autores>
                     <Autor>Tasoula Georgiou Hadjitofi</Autor>
@@ -134,7 +131,7 @@ and open the template in the editor.
                 <ClassTema>Arte</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/15296658.Tasoula_Georgiou_Hadjitofi</SobreAutor>
                 <CopiasVendidas>12</CopiasVendidas>
-                <Preço desconto="0">14€</Preço>
+                <Preço>14</Preço>
                 <Relacionados>
                     <RISBN>0312425848</RISBN>
                     <RISBN>125007150X</RISBN>
@@ -142,7 +139,7 @@ and open the template in the editor.
                 </Relacionados>
             </Livro>
             <Livro Secção="Arte">
-                <Título>Henry and the Chalk Dragon</Título>
+                <Título lang="en">Henry and the Chalk Dragon</Título>
                 <Autores>
                     <Autor> Jennifer Trafton</Autor>
                 </Autores>
@@ -156,7 +153,7 @@ and open the template in the editor.
                 <ClassTema>Arte</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/3413873.Jennifer_Trafton</SobreAutor>
                 <CopiasVendidas>32</CopiasVendidas>
-                <Preço desconto="0">14€</Preço>
+                <Preço>14</Preço>
                 <Relacionados>
                     <RISBN>0312425848</RISBN>
                     <RISBN>125007150X</RISBN>
@@ -165,12 +162,14 @@ and open the template in the editor.
             </Livro>
         </Livros>
     </Secção>
-    <Secção name="Gastronomia">
+    <Secção>
         <Livros>
             <Livro Secção="Gastronomia">
-                <Título>Salt, Fat, Acid, Heat</Título>
+                <Título lang="en">Salt, Fat, Acid, Heat</Título>
                 <SubTítulo>Mastering the Elements of Good Cooking</SubTítulo>
-                <Autor>Samin Nosrat</Autor>
+                <Autores>
+                    <Autor>Samin Nosrat</Autor>
+                </Autores>
                 <Sinopse>A visionary new master class in cooking that distills decades of professional 
                     experience into just four simple elements, from the woman declared “America’s next great cooking teacher” by Alice Waters.
                     In the tradition of The Joy of Cooking and How to Cook Everything comes Salt, Fat, Acid, Heat, an ambitious new approach to cooking 
@@ -187,16 +186,16 @@ and open the template in the editor.
                     Acid, Heat will be your compass in the kitchen. Destined to be a classic, it just might be the last cookbook you’ll ever need. </Sinopse>
                 <ISBN type="ISBN-10">1476753830</ISBN>
                 <Publisher>Simon Schuster</Publisher>
-                <ClassTema>Gastronomia</ClassTema>
+                <ClassTema>Gastronomia e Vinho</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/15401886.Samin_Nosrat</SobreAutor>
                 <CopiasVendidas>22</CopiasVendidas>
-                <Preço desconto="5">12€</Preço>
+                <Preço desconto="5">12</Preço>
                 <Relacionados>
                     <RISBN>0698195906</RISBN>
                 </Relacionados>
             </Livro>
             <Livro Secção="Gastronomia">
-                <Título>Cork Dork</Título>
+                <Título lang="en">Cork Dork</Título>
                 <SubTítulo>A Wine-Fueled Adventure Among the Obsessive Sommeliers, Big Bottle Hunters, and Rogue Scientists Who Taught Me to Live for Taste.</SubTítulo>
                 <Autores>
                     <Autor> Bianca Bosker</Autor>
@@ -216,20 +215,20 @@ and open the template in the editor.
                     us becomeconnoisseursnot only of wine but also ofpeoplewhose passions would more aptly be described as obsessions. </Sinopse>
                 <ISBN type="ISBN-10">0698195906</ISBN>
                 <Publisher>Penguin Books</Publisher>
-                <ClassTema>Gastronomia</ClassTema>
+                <ClassTema>Gastronomia e Vinho</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/6507893.Bianca_Bosker</SobreAutor>
                 <CopiasVendidas>12</CopiasVendidas>
-                <Preço desconto="5">10€</Preço>
+                <Preço>10</Preço>
                 <Relacionados>
                     <RISBN>1476753830</RISBN>
                 </Relacionados>
             </Livro>
         </Livros>
     </Secção>
-    <Secção name="Erotismo">
+    <Secção>
         <Livros>            
             <Livro Secção="Erotismo">
-                <Título>At Attention</Título>
+                <Título lang="en">At Attention</Título>
                 <Autores>
                     <Autor>Annabeth Albert</Autor>
                 </Autores>
@@ -243,16 +242,16 @@ and open the template in the editor.
                     scares him senseless. No fling lasts forever, and Apollo will need to decide what's more important—his past or his future—if he wants to keep Dylan in his life. </Sinopse>
                 <ISBN type="ISBN-13">1-335-01344-X</ISBN>
                 <Publisher>Carina Press </Publisher>
-                <ClassTema>Erotismo</ClassTema>
+                <ClassTema>Erotismo e Sexualidade</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/6477494.Annabeth_Albert</SobreAutor>
                 <CopiasVendidas>24</CopiasVendidas>
-                <Preço desconto="0">9€</Preço>
+                <Preço desconto="10">9</Preço>
                 <Relacionados>
                     <RISBN>9781579125745</RISBN>
                 </Relacionados>
             </Livro>
             <Livro Secção="Erotismo">
-                <Título>Delta of Venus</Título>
+                <Título lang="en">Delta of Venus</Título>
                 <Autores>
                     <Autor>Anaïs Nin</Autor>
                 </Autores>
@@ -260,22 +259,22 @@ and open the template in the editor.
                     Among these provocative stories, a Hungarian adventurer seduces wealthy women then vanishes with their money; a veiled woman selects strangers from a chic restaurant for 
                     private trysts; and a Parisian hatmaker named Mathilde leaves her husband for the opium dens of Peru. Delta of Venus is an extraordinarily rich and exotic collection from
                     the master of erotic writing. </Sinopse>
-                <ISBN type="ISBN-13:">9781579125745</ISBN>
+                <ISBN type="ISBN-13">9781579125745</ISBN>
                 <Publisher>Black Dog e Leventhal Publishers</Publisher>
-                <ClassTema>Erotismo</ClassTema>
+                <ClassTema>Erotismo e Sexualidade</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/7190.Ana_s_Nin</SobreAutor>
                 <CopiasVendidas>31</CopiasVendidas>
-                <Preço desconto="3">11€</Preço>
+                <Preço desconto="3">11</Preço>
                 <Relacionados>
                     <RISBN>1-335-01344-X</RISBN>
                 </Relacionados>
             </Livro>
         </Livros>
     </Secção>
-    <Secção name="Auto-Ajuda">
+    <Secção>
         <Livros>            
             <Livro Secção="Auto-Ajuda">
-                <Título>Every Body Yoga</Título>
+                <Título lang="en">Every Body Yoga</Título>
                 <SubTítulo>Let Go of Fear. Get On the Mat. Love Your Body.</SubTítulo>
                 <Autores>
                     <Autor>Jessamyn Stanley</Autor>
@@ -293,16 +292,16 @@ and open the template in the editor.
                     it seamlessly into his or her life. </Sinopse>
                 <ISBN type="ISBN-10">0761193111</ISBN>
                 <Publisher>Workman Publishing Company</Publisher>
-                <ClassTema>Auto-Ajuda</ClassTema>
+                <ClassTema>Autoajuda</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/15401949.Jessamyn_Stanley</SobreAutor>
                 <CopiasVendidas>20</CopiasVendidas>
-                <Preço desconto="8">12€</Preço>
+                <Preço desconto="8">12</Preço>
                 <Relacionados>
                     <RISBN>0761193111</RISBN>
                 </Relacionados>
             </Livro>
             <Livro Secção="Auto-Ajuda">
-                <Título>Awkward</Título>
+                <Título lang="en">Awkward</Título>
                 <SubTítulo>The Science of Why We're Socially Awkward and Why That's Awesome.</SubTítulo>
                 <Autores>
                     <Autor>Ty Tashiro</Autor>
@@ -320,20 +319,20 @@ and open the template in the editor.
                     and unique talents to harness our awesome potential—and more comfortably navigate our complex world. </Sinopse>
                 <ISBN type="ISBN-10">0761193111</ISBN>
                 <Publisher>William Morrow</Publisher>
-                <ClassTema>Auto-Ajuda</ClassTema>
+                <ClassTema>Autoajuda</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/7671077.Ty_Tashiro</SobreAutor>
                 <CopiasVendidas>21</CopiasVendidas>
-                <Preço desconto="0">14€</Preço>
+                <Preço>14</Preço>
                 <Relacionados>
                     <RISBN>0761193111</RISBN>
                 </Relacionados>
             </Livro>
         </Livros>
     </Secção>
-    <Secção name="Banda Desenhada">
+    <Secção>
         <Livros>      
             <Livro Secção="Banda Desenhada">
-                <Título>All-Star Batman, Volume 1</Título>
+                <Título lang="en">All-Star Batman, Volume 1</Título>
                 <SubTítulo>My Own Worst Enemy</SubTítulo>
                 <Autores>
                     <Autor>Scott Snyder</Autor>
@@ -347,13 +346,13 @@ and open the template in the editor.
                 <ClassTema>Banda Desenhada</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/70026.Scott_Snyder</SobreAutor>
                 <CopiasVendidas>25</CopiasVendidas>
-                <Preço desconto="15">18€</Preço>
+                <Preço>18</Preço>
                 <Relacionados>
                     <RISBN>1401268498</RISBN>
                 </Relacionados>
             </Livro>
             <Livro Secção="Banda Desenhada">
-                <Título>Green Lanterns, Volume 2</Título>
+                <Título lang="en">Green Lanterns, Volume 2</Título>
                 <SubTítulo>The Phantom Lantern</SubTítulo>
                 <Autores>
                     <Autor>Sam Humphries</Autor>
@@ -366,7 +365,7 @@ and open the template in the editor.
                 <ClassTema>Banda Desenhada</ClassTema>
                 <SobreAutor>https://www.goodreads.com/author/show/5819870.Sam_Humphries</SobreAutor>
                 <CopiasVendidas>23</CopiasVendidas>
-                <Preço desconto="5">13€</Preço>
+                <Preço>13</Preço>
                 <Relacionados>
                     <RISBN>1401269788</RISBN>
                 </Relacionados>

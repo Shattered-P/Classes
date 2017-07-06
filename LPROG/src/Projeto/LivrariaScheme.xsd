@@ -1,41 +1,27 @@
-<?xml version="1.0"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?xml version="1.0" encoding="UTF-8"?>
 
-<xs:schema version="1.0"
+<xs:schema attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
            xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-           xmlns:x="livro.xsd"
-           targetNamespace="livro.xsd"
-           elementFormDefault="qualified">
+           xmlns:x="bookstore"
+           targetNamespace="bookstore"
+>
     
-    <xs:element name="Livraria" type="x:TLivraria">
-        <xs:key name="Code_ISBN">
-            <xs:selector xpath="./x:Secçao/x:Livros/x:Livro"/>
-            <xs:field xpath="x:ISBN"/>
-        </xs:key>
-        
-        <xs:keyref name="Related_ISBN" refer="x:Code_ISBN">
-            <xs:selector xpath="x:Secção/x:Livros/x:Livro/x:Relacionados/x:RISBN"/>
-            <xs:field xpath="."/>
-        </xs:keyref>
-    </xs:element>
+    <xs:element name="Livraria" type="x:JLivraria"/>
     
-    <xs:complexType name="TLivraria">
+    <xs:complexType name="JLivraria">
         <xs:sequence>
-            <xs:element name="Secção" type="x:Secção"/>
-        </xs:sequence>
+            <xs:element name="Secção" type="x:buildSecção"/>
+        </xs:sequence>       
+    </xs:complexType>    
+    
+    <xs:complexType name="buildSecção">
+        <xs:sequence>
+            <xs:element name="Livros" type="x:JLivro" maxOccurs="unbounded"/>
+        </xs:sequence> 
     </xs:complexType>
     
-    <xs:complexType name="TSecção">
-        <xs:sequence>
-            <xs:element name="Livros" type="x:TLivros"/>
-        </xs:sequence>
-    </xs:complexType>
-    
-    <xs:complexType name="TLivros">
+    <xs:complexType name="JLivro">
         <xs:sequence>
             <xs:element name="Livro" type="x:TLivro" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -43,39 +29,42 @@ and open the template in the editor.
     
     <xs:complexType name="TLivro">
         <xs:sequence>
-            <xs:element name="Título" type="x:TTituloLivro"></xs:element>
+            <xs:element name="Título" type="x:TTituloLivro" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="SubTítulo" type="x:NameString" minOccurs="0" ></xs:element>
             <xs:element name="Autores" type="x:TAutores"/>
-            <xs:element name="Tradutor" type="x:TAutor" minOccurs="0"/>
-            <xs:element name="TituloOriginal" type="x:TTituloOriginal" minOccurs="0"/>
+            <xs:element name="Tradutor" type="x:NameString" minOccurs="0"/>
             <xs:element name="Sinopse" type="x:TSinopse" minOccurs="1"/>
-            <xs:element name="ISBN" type="x:TISBN" minOccurs="1"/>
-            <xs:element name="Publisher" type="x:TPublisher"/>
+            <xs:element name="ISBN" type="x:TISBN" minOccurs="1"></xs:element>
+            <xs:element name="Publisher" type="xs:string"/>
             <xs:element name="ClassTema" type="x:TClassTema"/>
-            <xs:element name="SobreAutor" type="x:TSobreAutor" />
-            <xs:element name="CopiasVendidas" type="x:TCopiasVendidas"/>
+            <xs:element name="SobreAutor" type="xs:anyURI" />
+            <xs:element name="CopiasVendidas" type="xs:integer"/>
             <xs:element name="Preço" type="x:TPreço"/>
             <xs:element name="Relacionados" type="x:TRelacionados" minOccurs="0"/>
         </xs:sequence>
+        <xs:attribute name="Secção" type="xs:string" use="required"/>
     </xs:complexType>
     
-    <xs:simpleType name="TTituloLivro">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="[0-9A-Z ][a-zA-Z0-9 ]*"/>
-        </xs:restriction>
-    </xs:simpleType>
+    <xs:complexType name="TTituloLivro">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="lang" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent> 
+    </xs:complexType>
     
-    <xs:simpleType name="TAutor">
+    <xs:simpleType name="NameString">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[0-9A-Z ][a-zA-Z0-9 ]*"/>
+            
         </xs:restriction>
     </xs:simpleType>
+
     
     <xs:complexType name="TAutores">
         <xs:sequence>
-            <xs:element name="Autor" type="x:TAutor" maxOccurs="unbounded"/>
+            <xs:element name="Autor" type="xs:string" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    
     
     
     <xs:simpleType name="TTituloOriginal">
@@ -84,5 +73,75 @@ and open the template in the editor.
         </xs:restriction>
     </xs:simpleType>
     
+    <xs:simpleType name="TSinopse">
+        <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+    
+    <xs:complexType name="TISBN">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type" type="x:WISBN" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:simpleType name="ISBNVERIFY">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,7}-[0-9X] | [0-9]{1,5} [0-9]{1,7} [0-9]{1,7} [0-9X] | (978|979)-[0-9]{1,5}-[0-9]{1,7}-[0-9]{1,7}-[0-9] |(978|979) [0-9]{1,5} [0-9]{1,7} [0-9]{1,7} [0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="WISBN">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ISBN-10"/>
+            <xs:enumeration value="ISBN-13"/>
+        </xs:restriction>
+    </xs:simpleType>
 
+    
+    <xs:simpleType name="TClassTema" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Arte"/>  
+            <xs:enumeration value="Autoajuda"/> 
+            <xs:enumeration value="Banda Desenhada"/> 
+            <xs:enumeration value="Ciências Exatas e Naturais"/>
+            <xs:enumeration value="Ciências Sociais e Humana"/>
+            <xs:enumeration value="Desporto e Laze"/>
+            <xs:enumeration value="Dicionários e Enciclopédia"/>
+            <xs:enumeration value="Direito"/>
+            <xs:enumeration value="Economia"/>
+            <xs:enumeration value="Finanças"/>
+            <xs:enumeration value="Contabilidade"/>
+            <xs:enumeration value="Engenharia"/>
+            <xs:enumeration value="Ensino e Educação"/>
+            <xs:enumeration value="Erotismo e Sexualidade"/>
+            <xs:enumeration value="Gastronomia e Vinho"/>
+            <xs:enumeration value="Gestão"/>
+            <xs:enumeration value="Guias e Roteiros"/>
+            <xs:enumeration value="História"/>
+            <xs:enumeration value="Infantojuvenil"/>
+            <xs:enumeration value="Informática"/>
+            <xs:enumeration value="Literatura"/>
+            <xs:enumeration value="Medicina e Saúde"/>
+            <xs:enumeration value="Plano Nacional de Leitura"/>
+            <xs:enumeration value="Política"/>
+            <xs:enumeration value="Religião e Moral"/>
+            <xs:enumeration value="Vida Prática"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="TPreço">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="desconto" type="xs:integer" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="TRelacionados">
+        <xs:sequence>
+            <xs:element name="RISBN" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>
